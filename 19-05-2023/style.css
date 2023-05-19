@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffac81;
+    background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.modulo {
+    /* border: 2px solid white; */
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+label {
+    color: ##8B1E3F;
+    padding: 10px;
+}
+
+input{
+    outline:none;
+    border-radius: 15px;
+    margin: 10px;
+    color: #ff928b;
+    border: none;
+    padding: 10px 20px 10px 20px;
+
+}
+
+button {
+    padding: 20px 30px;
+    background-color: #bd6f69;
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff928b;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+    padding: 40px;
+    cursor: pointer;
+  }
+  li:hover {
+    color: #bd6f69;
+    
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    align-items: center;
+    /* border: 2px solid white; */
+  }
+  nav {
+    /* border: 2px solid white; */
+    position: fixed;
+    top: 20px;
+  }
+  .Titolo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+  }
+  .Titolo:hover {
+    transform: scale(1.2);
+  }
+
+  form{
+    margin: 50px 0px 0px 0px;
+  }
+
+  .hamburger {
+    width: 20px;
+    display:none  }
+
+  /* Qui è quel il talbet */
+@media only screen and (max-width: 1200px) {
+    .Titolo{
+        font-size: medium;}
+    li{
+       font-size: small;
+    }
+    
+}
+/* Qui è quel il smarthphone */
+@media only screen and (max-width:768px) {
+   .modulo{
+    width: 250px;
+   }
+   ul {
+    display: none;    
+   }
+   .hamburger{
+    display: flex;
+   }
+
+}
