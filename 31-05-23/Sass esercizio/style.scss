@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+//variabili SASS
+
+//colori
+$background: #edf6f9;
+$primary-color: #83c5be;
+$secondary-color: #e29578;
+$active-color: #006d77;
+
+//font
+$def-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+//bordo
+$border-radius: 5px;
+
+
+//mixins
+
+@mixin flex($flex-dire: column, $just-cont: center, $ali-ite: center) {
+  display: flex;
+  flex-direction: $flex-dire;
+  justify-content: $just-cont;
+  align-items: $ali-ite;
+}
+
+//MEDIA QUERIES
+
+$tablet: 420px;
+$desktop: 768px;
+
+
+body {
+    font-family: $def-font;
+    color: $active-color;
+    background-color: $background;
+   
+}
+
+li {
+    list-style: none;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+nav, footer {
+    background-color: $secondary-color;
+    color: $active-color;
+    font-weight: 600;
+    // border: 2px solid #006d77;
+}
+ul {
+    @include flex(row, center, center);
+    gap: 3rem;
+    // border: 2px solid #006d77;
+    height: 6rem;
+}
+h1 {
+    color: #e29578;
+    font-weight: 800;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.paragrafi {
+    @include flex(row, start, start);
+    // flex-wrap: wrap;
+}
+main h1, main p{
+    margin: 3rem 2rem;
+    
+    }
+main p {
+    &:hover {
+        scale: 1.05;
+}
+}
+.img {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius;
+    &:hover {
+        scale: 1.05;
+    
+    }
+}
+img {
+    width: 35rem;
+}
+
+.immagini {
+    @include flex(row, space-around, center);
+    margin: 3rem auto;
+}
+
+//MEDIA QUERIES
+// la prendo con mixin con @content, poi la riprendo con include e specifico
+@mixin mobile {
+    @media screen and (max-width: $tablet){
+  @content      
+}
+}
+@include mobile {
+        .immagini
+        {@include flex(column, space-around, center);
+            gap: 3rem;
+            margin-left: 2rem;
+        }
+        .paragrafi {
+            @include flex(column, start, start);
+            gap: 2rem;
+        }
+}
