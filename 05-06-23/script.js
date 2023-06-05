@@ -187,3 +187,39 @@ const sample = {
 
 //4.4 Scrivi e testa in console un comando che stampi il valore (o valori) di sample
 //Object.values(sample)
+
+//5. Creare un mock.
+//Tutto deve essere inserito dentro un array di nome "mock".
+//Gli oggetti nell'array devono contenere le seguenti chiavi: id, todo, completed, userName
+//Scegliete i valori a piacere, ma con un senso (id->numero, todo->qualcosa da fare, completed->booleano.....)
+//L'array deve contenere almeno 4 oggetti
+
+
+//Stampare l'id del secondo oggetto
+//Verificare se la chiave "todo" è presente in un determinato oggetto
+
+const mock = [
+    {id:1,
+    todo: "fare la spesa",
+        completed: false,
+        userName: "Luca"},
+    {id: 2,
+    todo: "chiamare Sara",
+    completed: false,
+    userName: "Chiara"},
+    {id: 3,
+    todo: "andare in palestra",
+    completed: true,
+    userName: "Claudio"},
+    {id: 4,
+      todo: "lavare i piatti",
+      completed: false,
+      userName: "Marco",
+
+    }]
+
+    console.log(mock[0])
+    console.log(mock[1].id)
+    console.log(mock[2].hasOwnProperty("todo"))
+        
+
