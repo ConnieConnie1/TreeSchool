@@ -222,4 +222,185 @@ const mock = [
     console.log(mock[1].id)
     console.log(mock[2].hasOwnProperty("todo"))
         
+log.clear
 
+//Lista della spesa
+const lista = ["Pane", "Pasta", "Latte", "Olio"];
+// chiedere all'utente quale elemento della lista vuole rimuovere
+const cosaRimuovere = prompt ("Scegli qualcosa da rimuovere");
+// - chiedere l'elemento da togliere: indice / stringa
+const element = lista[index];
+
+for (let index = 0; index < lista.length; index++) {
+  const alimentoCorrente = lista[index];
+  
+}
+
+if (alimentoCorrente === cosaRimuovere)
+{lista.splice(index, 1)};
+
+console.log(lista);
+
+// - fare un ciclo fino a trovare l'elemento e toglierlo usando lista.splice()
+
+// Altro esercizio
+// Scrivere un codece che dato un input numerico riesca a determinare il fattoriale
+const input = prompt ("Numero di cui calcolare il fattoriale");
+const numberInput = Number(input);
+let output = 0;
+
+for (let index = numberInput; index >= 1; index--) {
+  output *= index;
+  
+}
+
+console.log(`Il fattoriale di ${numberInput} è: ${output}`);
+
+//for (initialExpression; condition; updateExpression)
+
+/*The initialExpression initializes and/or declares variables and executes only once.
+The condition is evaluated.
+If the condition is false, the for loop is terminated.
+If the condition is true, the block of code inside of the for loop is executed.
+The updateExpression updates the value of initialExpression when the condition is true.
+The condition is evaluated again. This process continues until the condition is false.*/
+
+/* Scrivere il codice che data un input numerico 
+     dell'utente riesca a determinare il fattoriale di quel numero;
+
+     5 -> 5 * 4 * 3 * 2 * 1 = 120;
+     4 -> 4 * 3 * 2 * 1 = 24;
+  */
+     const input = prompt('Numero di cui calcore il fattoriale');
+     const numberInput = Number(input);
+     let output = 0;
+   
+     // ...
+   
+     console.log(output) // 5!
+   // partendo dal passato dall'utente eseguire un loop
+     // che parte dal numero dato ed arriva ad 1,
+     // ad ogni ciclo sommare il nuovo valore calcolato
+
+
+//Es. sommare 10 volte il numero 5 con un ciclo while
+let somma = 0;
+let contatore = 0;
+
+while (contatore < 10) {
+  somma += 5; contatore++;
+}
+console.log (somma)
+
+
+
+// Definiamo una variabile a cui assegniamo il valore 100 sottraiamo il numero 3 per 10 volte
+
+let numeroPartenza = 100;
+let sottrazione = 3
+let contatore1 = 0;
+while (contatore < 10) {
+  numeroPartenza -= sottrazione; contatore ++;
+}
+console.log (numeroPartenza)
+
+
+//Date due stringe Leone e Leotta verificare se esistono lettere uguali (uguale valore, tipo e posizione)
+
+let a = "Leone";
+let b = "Leotta";
+let hannoLettereUguali; 
+
+for (let index = 0; index < a.length; index++) {
+  if (a[index]===b[index]){
+    hannoLettereUguali=true;
+    break;
+  } else { hannoLettereUguali= false}
+}
+
+if (hannoLettereUguali){
+  console.log("ci sono lettere uguali");
+  } else {console.log("Non ci sono lettere uguali")}
+
+  //Trovare i primi 15 numeri multipli di 3. Attenzione: utilizzare un solo ciclo; le variabili non devono essere create esternamente al ciclo
+
+  for(let y = 0, i = 0; y < 15; y++, i=i+3){
+    if(i == 0){
+        console.log("multiplo di 3:" + 1);
+    }
+    else
+        console.log("multiplo di 3: " + i);
+}
+
+// Stampare i  primi 20 nimeri pari
+
+var count = 0;
+var number = 2;
+
+while (count < 20) {
+  console.log(number);
+  number += 2;
+  count++;
+}
+
+/*1) Dato il seguente array ["gatto", "cane", "renna", "pinguino", "coccodrillo"]:
+Stampare tutte le parole con doppie consonanti (ad esempio renna);
+Aggiungere altri tre animali.
+Sommare tutte le letter dell'array.*/
+
+let array = ["gatto","cane","renna","pinguino","coccodrillo"];
+for(let i = 0; i < array.length; i++){ // scorro le singole parole
+    console.log("STAMPO PAROLA:" +array[i]);
+    let parolaSingola = array[i]; 
+    for(let y = 0; y < parolaSingola.length; y++ ){
+        console.log("STAMPO LETTERA:", array[i][y], " altra stampa", parolaSingola[y]);
+        if(parolaSingola[y] == parolaSingola[y+1]){
+            console.log("Doppioni trovati" + parolaSingola[y]);
+            console.log(parolaSingola);
+        }
+    }
+}
+array.push("leone", "canguro","topo")
+console.log(array);
+let animale = "leone,canguro,topo";
+
+// sommare tutte le lettere dell'array
+let contatore = 0;
+for(let i = 0; i < array.length; i++){
+    contatore += array[i].length;
+}
+console.log("HO " ,  contatore, " lettere");
+
+
+
+/*2) Dato il seguente array [3,2,31,23,4]
+Visualizzare il primo e l'ultimo elemento.
+Aggiungere gli elemento 21,7,4;
+Stampare tutti i numeri pari;
+Eliminare 'elemento con valore 2 */
+let arrayNumbers = [3,2,31,23,4];
+var primoElemento = arrayNumbers[0];
+console.log(primoElemento);
+var ultimoElemento = arrayNumbers[4];
+console.log(ultimoElemento);
+arrayNumbers.push(21,7,4);
+console.log(arrayNumbers);
+
+for (i=0; i<arrayNumbers.length; i++) {
+  let numero = arrayNumbers[i];
+  if (numero%2 ===0){
+    console.log(numero);
+  }
+}
+
+for (let i=0; i < arrayNumbers.length; i++){
+  if(arrayNumbers[i]==2) {
+    arrayNumbers.splice(i,1);
+  }
+}
+console.log(arrayNumbers)
+
+//4) Dato un array di interi [1,3,6,14,7,2,50] invertire le posizioni.
+
+let numeriPrima = [1,3,6,14,7,2,50];
+console.log(numeriPrima.reverse);
