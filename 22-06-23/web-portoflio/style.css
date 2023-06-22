@@ -1,0 +1,168 @@
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin-right: 120px;
+}
+
+li {
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: #787282;
+    margin: 20px 0px;
+    
+    /* border: 2px solid salmon; */
+}
+a {
+    text-decoration: none;
+    color: #787282;
+}
+
+
+h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color:  #1A093C;
+}
+h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #1A093C;
+  }
+
+p {
+    font-size: 18px;
+    padding-top: 8px;
+
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 25px 50px;
+    background-color: #1A093C;
+    width: 280px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.header-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 80px 40px 120px;
+    width: 40%;
+    justify-content: center;
+    
+}
+.welcome, .part-1 {
+    display: flex;
+    flex-direction: row;
+    /* flex: 1; */
+}
+
+#img-header {
+    max-width: 50%;
+    max-height: 700px;
+    height: auto;
+    padding: 60px 120px 40px 0px;
+}
+
+.img {
+    max-width: 60%;
+    max-height: 400px;
+    height: auto;
+    padding: 60px 80px 40px 120px;
+}
+
+footer {
+    background-color: #1A093C;
+    display: flex;
+    align-items: row;
+    padding: 100px;
+    justify-content: space-evenly;
+    align-items: start;
+
+    
+}
+.footer {
+    color: white;
+    font-size: 16px;
+  
+}
+input, textarea {
+    border: none;
+    font-size: 18px;
+    background-color: #F6F5FB;
+    padding: 12px 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 120px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    background-color: white;
+}
+
+/* Per mobile */
+@media (max-width: 680px) {
+    .welcome, .part-1 {
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .header-txt {
+        width: 80%;
+        
+    }
+    #img-header {
+        max-width: 60%;
+        max-height: 400px;
+        height: auto;
+        padding: 60px 80px 40px 120px;
+    }
+    #logo {
+        display: none;
+    }
+    nav {
+        justify-content: center;
+    }
+    footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

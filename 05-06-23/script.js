@@ -404,3 +404,100 @@ console.log(arrayNumbers)
 
 let numeriPrima = [1,3,6,14,7,2,50];
 console.log(numeriPrima.reverse);
+
+// ESERCIZIO -  Proviamo a scrivere una function
+  function capitalize(word) {
+    // substring/slice + .at() + toUpperCase
+    
+
+  
+
+  const word = "ciao"; //definiamo variabile ciao
+  const primaLettera = word.charAt(0);// Prediamo la prima lettera e la mettiamo in una variabile
+  console.log(primaLettera);
+  //prendere la prima lettere e la rendo maiuscola
+  //prendo tutti i caratteri dopo la prima
+  //metto insieme i due pezzi
+  //mi compiaccio di quello che ho fatto
+
+  const altriCaratteri = ciao.slice(1);
+  console.log (altriCaratteri);
+
+  const capitalized = primaLettera + altriCaratteri;
+  console.log(capitalized);
+
+  return capitalized; // torna la parola con la prima lettera maiuscola;
+  }
+
+  console.log(capitalize("luca")); // ->  Luca
+  console.log(capitalize("pippo")); // -> Pippo
+  console.log(capitalize("pluto")); // -> PluTo
+
+  // ESERCIZIO -  Data una variabile count
+  // scrivere una function che ne incrementa il valore
+  // scrivere una function che ne decrementa il valore
+  let count = 0;
+  function increment() {}
+  function decrement() {}
+
+  increment();
+  console.log(count); // 1
+
+  decrement();
+  console.log(count); // 0
+
+  increment();
+  console.log(count); // 1
+
+
+ // Esercizio
+  // scrivere due funzioni:
+
+  // La prima accetta una parametro numerico un torna un booleano (true/false)
+  // in base al fatto che il parametro sia divisibile per due o meno.
+
+  // La seconda function accetta due parametri:
+  // il primo è un numero
+  // il secondo è la funzione a cui verrà passato il primo parametro.
+  // eseguire la funzione del secondo parametro solo per numeri diversi da 0;
+  // stampare a schermo il risultato della seconda function
+
+  console.clear();
+
+  function isEven(num) {
+    return num % 2 === 0;
+  }
+  function isOdd(num) {
+    // return !isEven(num);
+    return num % 2 !== 0;
+  }
+
+  function validateNumber(number, validateFn) {
+    if (number === 0) {
+      console.error("Inserisci un numero diverso da zero");
+      return;
+    }
+
+    if (typeof validateFn !== "function") {
+      console.error("Inserisci una function valida");
+      return;
+    }
+
+    const resultOfValidation = validateFn(number);
+
+    if (resultOfValidation === true) {
+      console.log("la validazione di " + number + " ha tornato true");
+    } else {
+      console.log("la validazione di " + number + " ha tornato false");
+    }
+
+    const testo = resultOfValidation ? "evviva!" : "oh no!";
+    console.log(testo);
+  }
+
+  validateNumber(10, isEven); // è vero
+  validateNumber(0, isEven); // torna messaggio di errore
+  validateNumber(5, isEven); // non è vero
+  validateNumber(5, isOdd); // non è vero
+  validateNumber(10, isOdd); // non è vero
+})();
